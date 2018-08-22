@@ -14,7 +14,7 @@ struct Pokemon {
     }
 
     private static func possibleHPValues(baseStats: BaseStats, hpValue: Int, cpm: Float) -> [Int] {
-        return (0...16).filter { hpValue == calculateHP(baseStats: baseStats, hpIV: $0, cpm: cpm) }
+        return (0...15).filter { hpValue == calculateHP(baseStats: baseStats, hpIV: $0, cpm: cpm) }
     }
 
     private static func parseIV(iv: String, level: Level) -> IVResult {

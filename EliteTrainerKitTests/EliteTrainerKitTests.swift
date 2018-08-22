@@ -10,27 +10,32 @@ import XCTest
 @testable import EliteTrainerKit
 
 class EliteTrainerKitTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testBulbasaur() {
+        let bulbasaurBaseStats = BaseStats(attack: 118, defense: 118, hp: 90) // フシギダネ
+        let levels = Level.levels(stardust: 8000)
+        let results = Pokemon.calculateIV(baseStats: bulbasaurBaseStats, cp: 852, hpValue: 76, levels: levels)
+        XCTAssertEqual(results.count, 11)
+
+        XCTAssertEqual(results.first?.level, ._35)
+        XCTAssertEqual(results.first?.attack, 10)
+        XCTAssertEqual(results.first?.defense, 14)
+        XCTAssertEqual(results.first?.hp, 10)
+
+        XCTAssertEqual(results.last?.level, ._36)
+        XCTAssertEqual(results.last?.attack, 13)
+        XCTAssertEqual(results.last?.defense, 4)
+        XCTAssertEqual(results.last?.hp, 10)
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+
+    func testTentacruel() {
+        let tentacruelBaseStats = BaseStats(attack: 166, defense: 237, hp: 160) // ドククラゲ
+        let levels = Level.levels(stardust: 5000)
+        let results = Pokemon.calculateIV(baseStats: tentacruelBaseStats, cp: 2034, hpValue: 128, levels: levels)
+        XCTAssertEqual(results.count, 1)
+
+        XCTAssertEqual(results.first?.level, ._30)
+        XCTAssertEqual(results.first?.attack, 15)
+        XCTAssertEqual(results.first?.defense, 15)
+        XCTAssertEqual(results.first?.hp, 15)
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }

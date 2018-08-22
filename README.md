@@ -1,4 +1,11 @@
 # EliteTrainerKit
+
+[![EliteTrainerKit](https://cocoapods.org/pods/EliteTrainerKit)](https://cocoapod-badges.herokuapp.com/v/EliteTrainerKit/badge.png)
+[![EliteTrainerKit](https://cocoapods.org/pods/EliteTrainerKit)](https://cocoapod-badges.herokuapp.com/p/EliteTrainerKit/badge.png)
+[![Build Status](https://travis-ci.org/starhoshi/EliteTrainerKit.svg?branch=master)](https://travis-ci.org/starhoshi/EliteTrainerKit)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+
 Pokemon Go utility library for Swift.
 
 # Installation

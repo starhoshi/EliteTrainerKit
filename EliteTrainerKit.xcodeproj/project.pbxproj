@@ -16,6 +16,14 @@
 		32293990212D90F7005364A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3229398E212D90F7005364A9 /* Main.storyboard */; };
 		32293992212D90F9005364A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32293991212D90F9005364A9 /* Assets.xcassets */; };
 		32293995212D90F9005364A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32293993212D90F9005364A9 /* LaunchScreen.storyboard */; };
+		3229399E212D91DC005364A9 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3229399D212D91DC005364A9 /* Pokemon.swift */; };
+		3229399F212D91DC005364A9 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3229399D212D91DC005364A9 /* Pokemon.swift */; };
+		322939A1212D91F6005364A9 /* BaseStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322939A0212D91F6005364A9 /* BaseStats.swift */; };
+		322939A2212D91F6005364A9 /* BaseStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322939A0212D91F6005364A9 /* BaseStats.swift */; };
+		3296BD94212D9487005A66D9 /* IVResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3296BD93212D9487005A66D9 /* IVResult.swift */; };
+		3296BD95212D9487005A66D9 /* IVResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3296BD93212D9487005A66D9 /* IVResult.swift */; };
+		3296BD97212D94B5005A66D9 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3296BD96212D94B5005A66D9 /* Level.swift */; };
+		3296BD98212D94B5005A66D9 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3296BD96212D94B5005A66D9 /* Level.swift */; };
 		AEDDF2BB64327F78C19EBE0A /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95C31064BFD614DD92B141A /* Pods_Demo.framework */; };
 		BF31468F3926B3F10749D19E /* Pods_EliteTrainerKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B6DB1CE533202BA7C04D1D /* Pods_EliteTrainerKitTests.framework */; };
 /* End PBXBuildFile section */
@@ -46,6 +54,10 @@
 		32293991212D90F9005364A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32293994212D90F9005364A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32293996212D90F9005364A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3229399D212D91DC005364A9 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		322939A0212D91F6005364A9 /* BaseStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStats.swift; sourceTree = "<group>"; };
+		3296BD93212D9487005A66D9 /* IVResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IVResult.swift; sourceTree = "<group>"; };
+		3296BD96212D94B5005A66D9 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		544704034957E967770AC914 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		6CA2EF41BCBD7219B1E7E66C /* Pods-EliteTrainerKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EliteTrainerKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EliteTrainerKitTests/Pods-EliteTrainerKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		83B6DB1CE533202BA7C04D1D /* Pods_EliteTrainerKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EliteTrainerKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +123,10 @@
 			children = (
 				3229396C212D8F58005364A9 /* EliteTrainerKit.h */,
 				3229396D212D8F58005364A9 /* Info.plist */,
+				3229399D212D91DC005364A9 /* Pokemon.swift */,
+				322939A0212D91F6005364A9 /* BaseStats.swift */,
+				3296BD93212D9487005A66D9 /* IVResult.swift */,
+				3296BD96212D94B5005A66D9 /* Level.swift */,
 			);
 			path = EliteTrainerKit;
 			sourceTree = "<group>";
@@ -242,6 +258,7 @@
 				TargetAttributes = {
 					32293968212D8F58005364A9 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 					};
 					32293971212D8F58005364A9 = {
 						CreatedOnToolsVersion = 9.4;
@@ -340,15 +357,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Demo-checkManifestLockResult.txt",
 			);
@@ -364,6 +377,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3296BD94212D9487005A66D9 /* IVResult.swift in Sources */,
+				322939A1212D91F6005364A9 /* BaseStats.swift in Sources */,
+				3296BD97212D94B5005A66D9 /* Level.swift in Sources */,
+				3229399E212D91DC005364A9 /* Pokemon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,8 +396,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3296BD98212D94B5005A66D9 /* Level.swift in Sources */,
+				322939A2212D91F6005364A9 /* BaseStats.swift in Sources */,
 				3229398D212D90F7005364A9 /* ViewController.swift in Sources */,
 				3229398B212D90F7005364A9 /* AppDelegate.swift in Sources */,
+				3296BD95212D9487005A66D9 /* IVResult.swift in Sources */,
+				3229399F212D91DC005364A9 /* Pokemon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +559,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EB1310A61147E4B353F83678 /* Pods-EliteTrainerKit.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -555,6 +577,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.starhoshi.EliteTrainerKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -564,6 +587,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DDD5BB435095FBC265D22D76 /* Pods-EliteTrainerKit.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -590,6 +614,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9CEFDF0A5E26D54A7D873F2A /* Pods-EliteTrainerKitTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5NG7BR536A;
 				INFOPLIST_FILE = EliteTrainerKitTests/Info.plist;
@@ -609,6 +634,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6CA2EF41BCBD7219B1E7E66C /* Pods-EliteTrainerKitTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5NG7BR536A;
 				INFOPLIST_FILE = EliteTrainerKitTests/Info.plist;

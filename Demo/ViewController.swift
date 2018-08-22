@@ -12,7 +12,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        let bulbasaurBaseStats = BaseStats(attack: 118, defense: 118, hp: 90)
+        let levels = Level.levels(stardust: 8000)
+        let values = Pokemon.calculateIV(baseStats: bulbasaurBaseStats, cp: 852, hpValue
+            : 76, levels: levels)
+        print(values)
     }
 
     override func didReceiveMemoryWarning() {

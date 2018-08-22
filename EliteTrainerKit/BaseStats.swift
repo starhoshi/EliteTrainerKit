@@ -12,5 +12,5 @@ import Foundation
 struct BaseStats {
     let attack: Int
     let defense: Int
-    let hp: Int
+    let stamina: Int
 }

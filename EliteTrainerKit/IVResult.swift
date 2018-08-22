@@ -13,5 +13,5 @@ struct IVResult {
     let level: Level
     let attack: Int
     let defense: Int
-    let hp: Int
+    let stamina: Int
 }

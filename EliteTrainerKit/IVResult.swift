@@ -9,9 +9,9 @@
 import Foundation
 
 /// Calculaged Individual Value
-struct IVResult {
-    let level: Level
-    let attack: Int
-    let defense: Int
-    let stamina: Int
+public struct IVResult {
+    public let level: Level
+    public let attack: Int
+    public let defense: Int
+    public let stamina: Int
 }

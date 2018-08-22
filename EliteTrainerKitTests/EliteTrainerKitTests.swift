@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import EliteTrainerKit
+import EliteTrainerKit
 
 class EliteTrainerKitTests: XCTestCase {
     func testBulbasaur() {

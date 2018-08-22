@@ -9,7 +9,7 @@
 import Foundation
 
 /// https://bulbapedia.bulbagarden.net/wiki/Power_Up
-enum Level {
+public enum Level {
     case _1
     case _1_5
     case _2
@@ -92,7 +92,7 @@ enum Level {
 
     /// https://pokemongo.gamepress.gg/cp-multiplier
     /// CP Multiplier
-    var cpm: Float {
+    public var cpm: Float {
         switch self {
         case ._1: return 0.094
         case ._1_5: return 0.135137432
@@ -177,7 +177,7 @@ enum Level {
     }
 
     /// https://pokemongo.gamepress.gg/power-up-costs
-    static func levels(stardust: Int, isPoweredUP: Bool = false) -> [Level] {
+    public static func levels(stardust: Int, isPoweredUP: Bool = false) -> [Level] {
         switch (stardust, isPoweredUP) {
         case (200, true): return [._1, ._1_5, ._2, _2_5]
         case (200, false): return [._1, ._2]

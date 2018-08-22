@@ -9,8 +9,14 @@
 import Foundation
 
 /// [Base stats in Pokemon GO - bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Base_stats#In_Pok.C3.A9mon_GO)
-struct BaseStats {
-    let attack: Int
-    let defense: Int
-    let stamina: Int
+public struct BaseStats {
+    public let attack: Int
+    public let defense: Int
+    public let stamina: Int
+
+    public init(attack: Int, defense: Int, stamina: Int) {
+        self.attack = attack
+        self.defense = defense
+        self.stamina = stamina
+    }
 }

@@ -38,4 +38,11 @@ class EliteTrainerKitTests: XCTestCase {
         XCTAssertEqual(results.first?.defense, 15)
         XCTAssertEqual(results.first?.stamina, 15)
     }
+
+    func testInvalidStatus() {
+        let tentacruelBaseStats = BaseStats(attack: 166, defense: 237, stamina: 160) // ドククラゲ
+        let levels = Level.levels(stardust: 5000)
+        let results = Pokemon.calculateIV(baseStats: tentacruelBaseStats, cp: 100, hp: 10, levels: levels)
+        XCTAssertEqual(results.count, 0)
+    }
 }

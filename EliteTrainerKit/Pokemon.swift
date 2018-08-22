@@ -17,12 +17,14 @@ public struct Pokemon {
         return (0...15).filter { hp == calculateHP(baseStats: baseStats, stamina: $0, cpm: cpm) }
     }
 
-    private static func parseIV(iv: String, level: Level) -> IVResult {
+    private static func parseIV(iv: String, level: Level) -> IVResult? {
         let maskAttack = 0xf00
         let maskDefense = 0x0f0
         let maskStamina = 0x00f
 
-        let ivInt = Int(iv, radix: 16)!
+        guard let ivInt = Int(iv, radix: 16) else {
+            return nil
+        }
 
         return IVResult (
             level: level,
@@ -32,8 +34,10 @@ public struct Pokemon {
         )
     }
 
-    private static func calculateCP(baseStats: BaseStats, iv: String, level: Level) -> Int {
-        let iv = Pokemon.parseIV(iv: iv, level: level)
+    private static func calculateCP(baseStats: BaseStats, iv: String, level: Level) -> Int? {
+        guard let iv = Pokemon.parseIV(iv: iv, level: level) else {
+            return nil
+        }
         let attack = Float(baseStats.attack + iv.attack)
         let defense = pow(Float(baseStats.defense + iv.defense), 0.5)
         let hp = pow(Float(baseStats.stamina + iv.stamina), 0.5)
@@ -52,7 +56,9 @@ public struct Pokemon {
                         let iv = "\(attack)\(defense)\(dec[staminaIndex])"
                         let testCP = calculateCP(baseStats: baseStats, iv: iv, level: level)
                         if testCP == cp {
-                            results.append(parseIV(iv: iv, level: level))
+                            if let validIV = parseIV(iv: iv, level: level) {
+                                results.append(validIV)
+                            }
                         }
                     }
                 }
